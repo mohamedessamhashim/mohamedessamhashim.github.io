@@ -25,9 +25,9 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Mohamed Essam Hashim"
-  pronouns         : "he/him"  
+  pronouns         : # example: "she/her"  
   bio              : "Medical AI Researcher and Physician from UMST, focused on Neuroscience AI and Global Health."
-  location         : "Khartoum, Sudan / Cleveland, OH"
+  location         : "Cleveland, OH"
   employer         : "University Hospitals Cleveland Medical Center (Incoming)"
   uri              : "https://mohamedessamhashim.github.io"
   email            : "mohamedessamhashim@gmail.com" 
