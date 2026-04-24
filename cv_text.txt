@@ -1,0 +1,118 @@
+Mohamed Essam Hashim
+Newsletter | mohamedessamhashim@gmail.com
+/linkedinlinkedin.com/in/mohamedehashim | /githubgithub.com/mohamedessamhashim
+U.S. Citizen
+EDUCATION
+• University of Medical Sciences & T echnologySeptember 2018 - April 2024
+Bachelor of Medicine, Bachelor of Surgery (M.B.,B.S.)Khartoum, Sudan
+◦ Graduated at 19. Distinction / First-Class Honours Grade
+◦ Member of the UMST Medical Student Association Executive Board (UMSA).
+RESEARCH& PROFESSIONALEXPERIENCE
+• Research Fellow — University Hospitals Cleveland Medical CenterJune 2026 – Present (Incoming)
+Research Methodology
+◦ Quantitative MRI in Neurological Diseases
+• Global Burden of Disease Collaborator — IHME, University of WashingtonJan 2026 – Present
+T ools: DisMod-MR, R
+◦ Appointed to a global network of 11,000+ researchers across 160+ countries to quantify the impact of
+hundreds of diseases, injuries, and risk factors.
+◦ Providing ground-truth clinical assessment and systematic data review for neurological disease metrics
+and neuro-oncology burden in North Africa and the Middle East.
+◦ Contributing to primary data source identification and epidemiological verification for neurovascular
+pathologies, bridging Global South clinical realities with IHME’s computational modeling.
+• Medical AI Research Collaborator — Kann Lab (MGB/Harvard Medical School)Sep 2025 – Present
+T ools: PyT orch, MONAI, HuggingFace, GitHub
+◦ Developing large language model (LLM)-assisted segmentation pipelines for pediatric gliomas
+(BraTS-PEDs).
+◦ Built vision-only baselines (nnU-Net, Swin-UNETR) and designed synthetic prompt generator for
+structured imaging outputs.
+◦ Integrated text and imaging into fusion architectures (cross-attention, FiLM with LoRA).
+◦ Conducted preprocessing (NIfTI conversion, bias correction, normalization) and quality control.
+◦ Drafting figures, methods, and results for manuscripts under mentorship of Dr. Benjamin Kann.
+• Project Lead — MARC-Osler InitiativeJan 2026 – April 2026
+Federated Learning Strategy, Strategic Leadership
+◦ Spearheaded an initiative to establish a global federated learning network focused on decentralized brain
+tumor segmentation.
+◦ Secured strategic partnerships with MLCommons MedPerf and collaborated with domain experts (Dr.
+Spyridon Bakas) to design the preliminary framework for international node deployment.
+◦ Assembled a cross-institutional scientific advisory board featuring experts from Cairo University (Kasr Al
+Ainy) and Harvard University.
+◦ Architected the deployment roadmap for the inaugural pilot node at Cairo University before pausing the
+initiative to focus on primary clinical AI research.
+• Founder — Craniolabs (Medical AI Startup/Exited)May 2025 – November 2025
+AI/Data Pipelines, Partnerships
+◦ Founded medical AI startup focused on solving data bottlenecks in low-resource hospitals, an initiative
+that helps empower hospitals in underserved communities.
+◦ Built clinical data pipelines for more than 300 CT and MRI scans, signed MoUs and partnered with
+diagnostic centers.
+◦ Assembled a team of dedicated founding members including FDA Regulatory advisors and Fortune 500
+Engineers.
+◦ Accepted into NVIDIA Inception program for AI startups; raised $15K bridge round and completed
+preliminary mission.
+
+RESEARCHPROJECTS
+• Post-treatment Glioblastoma Segmentation (GBM-Twin)Sep 2025
+T ools: Python, Git, PyT orch, CUDA [/github]
+◦ Built a machine learning pipeline to segment brain tumors in MRI scans using the BraTS 2024 dataset.
+◦ Processed over 1,600 MRI cases with standardized workflow (alignment, resampling, normalization).
+◦ Trained and validated deep learning models for tumor region identification with 3D segmentations.
+◦ Exported outputs in clinical format (NIfTI) for radiologist interpretation.
+◦ Released reproducible codebase for extension and benchmarking.
+• Interleukin-6 Expression in Alzheimer’s DiseaseMay 2025
+T ools: Git, SPSS, GEO Database, GLM [/github] [medRxiv]
+◦ Investigated association between IL-6 expression and Alzheimer’s Disease (AD), Mild Cognitive
+Impairment (MCI), and Control (CTL) groups.
+◦ Analyzed blood transcriptome data for 329 participants (145 AD, 80 MCI, 104 CTL).
+◦ Applied General Linear Model (GLM) controlling for age and gender covariates.
+• Clinical Python Project: Stroke T riage Assessment T oolMay 2025
+T ools: Python, Django [/github]
+◦ Developed a Django-based web app for emergency stroke triage.
+◦ Implemented NIHSS, BE-FAST+, RACE, and ASPECTS scoring systems.
+◦ Integrated AHA/ASA guideline recommendations for tPA and thrombectomy decisions.
+CLINICALEXPERIENCE
+• El Safa Medical T ower May 2024 – Oct 2024
+Clinical Observer — Neuro-ophthalmology Cairo, Egypt
+◦ Supported clinic operations and patient care in a busy ophthalmology clinic weekly.
+◦ Assisted in ophthalmology procedures and managed post-procedure patient care.
+◦ Observed attending ophthalmologist and was part of multidisciplinary discussions.
+◦ Examined patients including cases of Descemet membrane and corneal defects.
+• Muhimbili National Hospital (MNH)Jun 2023 – Apr 2024
+Clinical Elective Student — Internal Medicine, Surgery, NeurologyDar Es Salaam, Tanzania
+◦ Participated in interdisciplinary rounds with 12+ healthcare professionals.
+◦ Assisted in elective surgeries and managed post-operative patient care.
+◦ Observed outpatient clinics in internal medicine and surgical specialties.
+◦ Examined neurological patients including cases of progressive multifocal leukoencephalopathy.
+• Rural Residency Oct 2022 – Nov 2022
+Clinical Volunteer Resident Meroe, Sudan
+◦ Organized sponsorships, medications, and transport for outreach teams.
+◦ Conducted home visits, screenings, counseling, and school health education.
+◦ Assessed rural clinics and pharmacies; reported shortages to Ministry of Health.
+◦ Featured in media interview highlighting systemic challenges.
+PUBLICATIONS/PREPRINTS
+• Hashim ME. Dynamic Network Biomarker Analysis of Cerebrospinal Fluid Proteomics Identifies a Critical
+Transition Module in Alzheimer’s Disease Progression.Submitted to npj Systems Biology and
+Applications. April 2026
+• Hashim ME. Blood Interleukin-6 (IL-6) mRNA Expression in Alzheimer’s Disease: A Preliminary
+Analysis.medRxiv. Preprint. Posted July 14, 2025. doi:10.1101/2025.07.13.25331470
+• Hashim ME. Awareness, Attitudes, and Practices (KAP) Regarding Infection Prevention in the Context of
+the COVID-19 Pandemic Among Medical Students at UMST. Graduation Thesis. Successfully Defended on
+March 2024.
+
+SKILLS
+• Programming:Python (PyTorch, MONAI, HuggingFace, scikit-learn), R
+• Medical Imaging:DICOM/NIfTI, nnU-Net, Swin-UNETR, ANTs registration, 3D Slicer
+• T ools:Git/GitHub, Jupyter, VS Code, Vast.ai GPUs
+• Clinical:NIH Stroke Scale, patient-facing protocols, HIPAA/GCP compliance
+PROFESSIONALMEMBERSHIPS
+• American Association for the Advancement of Science (AAAS)August 2024 - August 2025
+◦ Supporting Membership
+CERTIFICATIONS
+• CITI Program:Human Subjects Research (HSR) - Biomedical ResearchMay 2025
+• National Institute on Drug Abuse:Good Clinical Practice (GCP)April 2025
+• National Institutes of Health:NIH Stroke Scale Certification (NIHSS)August 2024
+• American College of Surgeons:Stop the Bleed®November 2023
+• American College of Surgeons:TEAMNovember 2023
+ADDITIONALINFORMATION
+Languages:English (Native), Arabic (Fluent)
+Interests:Writing, Non-fiction/Science Reading, Podcasts
+REFERENCES
+Available upon request.
