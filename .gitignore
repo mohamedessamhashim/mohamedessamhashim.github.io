@@ -1,0 +1,10 @@
+# Originals keep their metadata and never leave this machine.
+assets/photos/
+assets/Mohamed Essam Hashim-CV.pdf
+
+# Local asset tooling and the brief.
+tools/
+PROMPT.md
+
+node_modules/
+.DS_Store
