@@ -15,6 +15,7 @@ const POINTER_YAW = 0.16;
 const POINTER_PITCH = 0.08;
 const POINTER_EASE = 0.05;
 const SLOW_FRAME_MS = 21;
+const SCROLL_REST_MS = 300;
 
 const PHOTO_WIDTHS = [640, 1280, 1920];
 const MAX_FEATURED_POSTS = 3;
@@ -29,6 +30,7 @@ const NAV_SECTIONS = [
 ];
 
 // The rail dot rides this line, and each entry appears as the dot reaches it.
+// Change this together with --track in styles.css.
 const TIMELINE_TRACK = '62%';
 
 // Well before Contact arrives, so the shader has time to compile in the background.
@@ -94,7 +96,7 @@ function renderTimeline(block) {
         ${renderHeading(block, 'timeline-title')}
         <div class="tl">
           <div class="tl__rail" aria-hidden="true">
-            <div class="tl__line"></div>
+            <div class="tl__clip"><div class="tl__line"></div></div>
             <div class="tl__dot"></div>
           </div>
           <ol class="tl__list">
@@ -406,37 +408,17 @@ function headingReveals(gsap, SplitText) {
   });
 }
 
+// The rail and the entrances are CSS, so they keep up with Safari's off-thread scrolling.
+// This only marks each entry as the dot passes it.
 function timelineMotion(gsap, ScrollTrigger) {
-  const timeline = document.querySelector('.tl');
-  const rail = timeline.querySelector('.tl__rail');
-  const alternating = matchMedia('(min-width: 900px)').matches;
-
-  gsap.set('.tl__dot', { visibility: 'visible' });
-  gsap.timeline({
-    defaults: { ease: 'none' },
-    scrollTrigger: {
-      trigger: timeline,
+  gsap.utils.toArray('.tl__item').forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item.querySelector('.tl__marker'),
       start: `top ${TIMELINE_TRACK}`,
-      end: `bottom ${TIMELINE_TRACK}`,
-      scrub: true,
-      invalidateOnRefresh: true,
-    },
-  })
-    .fromTo('.tl__line', { scaleY: 0 }, { scaleY: 1 }, 0)
-    .fromTo('.tl__dot', { y: 0 }, { y: () => rail.offsetHeight }, 0);
-
-  gsap.utils.toArray('.tl__item').forEach((item, index) => {
-    const start = `top ${TIMELINE_TRACK}`;
-    const marker = item.querySelector('.tl__marker');
-    const fromLeft = alternating && index % 2 === 0;
-    gsap.from(item.querySelector('.tl__body'), {
-      x: fromLeft ? -28 : 28,
-      autoAlpha: 0,
-      duration: 1,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: marker, start, once: true },
+      end: 'max',
+      toggleClass: { targets: item, className: 'is-reached' },
+      onEnter: () => item.classList.add('is-seen'),
     });
-    ScrollTrigger.create({ trigger: marker, start, toggleClass: { targets: item, className: 'is-reached' } });
   });
 }
 
@@ -512,12 +494,28 @@ const whenIdle = () => new Promise((resolve) => {
   else addEventListener('load', go, { once: true });
 });
 
+// Start-up stalls the main thread for a moment, which would freeze the scrubbed hero if it landed
+// mid-scroll. The still stands in until the page has been at rest for a beat.
+const whenScrollRests = () => new Promise((resolve) => {
+  let timer = 0;
+  const wait = () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      removeEventListener('scroll', wait);
+      resolve();
+    }, SCROLL_REST_MS);
+  };
+  addEventListener('scroll', wait, { passive: true });
+  wait();
+});
+
 async function startBrain() {
   const tier = brainTier();
   if (tier === 'none') return;
   await whenIdle();
 
   const { createBrain, POSE } = await import('./brain.js');
+  await whenScrollRests();
   const canvas = document.querySelector('.hero__canvas');
   const box = document.querySelector('.hero__brain');
   const maxRatio = isMobileViewport() ? 1.5 : 2;

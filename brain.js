@@ -120,7 +120,7 @@ export async function createBrain({ canvas, modelUrl, pixelRatio, preserveDrawin
   }
 
   // Compile before the first visible frame so the canvas fade-in never hitches.
-  renderer.compile(scene, camera);
+  await renderer.compileAsync(scene, camera);
   await nextTask();
 
   return {
